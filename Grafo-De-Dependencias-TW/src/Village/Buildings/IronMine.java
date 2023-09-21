@@ -1,0 +1,17 @@
+package Village.Buildings;
+
+import Village.Buildings.Abstract.BuildingImpl;
+import Village.Buildings.Constants.EBuilding;
+import Village.Buildings.Intefaces.Building;
+
+public class IronMine extends BuildingImpl{
+    
+    public IronMine() {
+        super(EBuilding.IRON_MINE);
+    }
+    
+    @Override
+    public Building clone(){
+        return new IronMine();
+    }
+}

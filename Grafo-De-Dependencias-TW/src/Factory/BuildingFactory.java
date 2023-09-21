@@ -1,25 +1,29 @@
 package Factory;
 
-import Buildings.Building;
-import Buildings.VillageHeadQuarters;
+import java.util.HashMap;
+import java.util.Map;
+
+import Village.Buildings.Farm;
+import Village.Buildings.VillageHeadQuarters;
+import Village.Buildings.Constants.EBuilding;
+import Village.Buildings.Intefaces.Building;
 
 public class BuildingFactory implements AbstractFactory<Building>{
 
-    @Override
-    public Building build(String name) {
-        try{
-            if(("village headquarters").equalsIgnoreCase(name)){
-                return new VillageHeadQuarters();
-            }
-        }catch(Exception e){
-            return null;
-        }
-        return null;
+    private Map<EBuilding,Building> buildingPrototype = new HashMap<>();
+
+    public BuildingFactory(){
+        this.createPrototypeMap();
     }
 
     @Override
-    public Building recuit(String unity) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'recuit'");
+    public Building build(EBuilding eBuilding) {
+        return this.buildingPrototype.get(eBuilding).clone();
     }
+
+    private void createPrototypeMap(){
+        this.buildingPrototype.put(EBuilding.FARM,new Farm());
+        this.buildingPrototype.put(EBuilding.VILLAGE_HEADQUARTERS,new VillageHeadQuarters());
+    }
+
 }

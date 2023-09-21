@@ -1,11 +1,17 @@
-package Buildings;
+package Village.Buildings;
 
-public class VillageHeadQuarters extends Building{
+import Village.Buildings.Abstract.BuildingImpl;
+import Village.Buildings.BuildingConstants.EBuilding;
+import Village.Buildings.Intefaces.Building;
+
+public class VillageHeadQuarters extends BuildingImpl{
 
     public VillageHeadQuarters() {
-        super(  
-                EBuilding.VILLAGE_HEADQUARTERS.getName(),
-                EBuilding.VILLAGE_HEADQUARTERS.getMaxLevel()
-            );
+        super(EBuilding.VILLAGE_HEADQUARTERS);
+    }
+
+    @Override
+    public Building clone(){
+        return new VillageHeadQuarters();
     }
 }
