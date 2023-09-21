@@ -6,9 +6,10 @@ import Village.Buildings.Constants.EBuilding;
 
 public interface Building{
 
-    EBuilding   getBuilding();
-    String      getBuildingType();
-    void        upLevel();
-    Building    clone();
-    Map<EBuilding,Integer> getDependencies();
+    EBuilding               getBuilding();
+    String                  getBuildingType();
+    Integer                 getLevel();
+    void                    upLevel();
+    Building                clone();
+    
 }

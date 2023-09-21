@@ -26,4 +26,10 @@ public class BuildingFactory implements AbstractFactory<Building>{
         this.buildingPrototype.put(EBuilding.VILLAGE_HEADQUARTERS,new VillageHeadQuarters());
     }
 
+    @Override
+    public Building build() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

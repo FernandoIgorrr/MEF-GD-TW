@@ -2,8 +2,7 @@ package Factory;
 
 import Graph.Node;
 import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.Building;
 
-public interface AbstractFactory<T>{
+public interface AbstractFactory<T> extends Factory{
     T build(EBuilding eBuilding);
 }

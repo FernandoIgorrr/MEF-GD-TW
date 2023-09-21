@@ -8,7 +8,7 @@ import Village.Buildings.Intefaces.Building;
 public abstract class BuildingImpl implements Building{
 
     private         EBuilding   building;
-    private         int         level;
+    private         Integer         level;
 
     public BuildingImpl(EBuilding building) {
         this.building   = building;
@@ -26,6 +26,7 @@ public abstract class BuildingImpl implements Building{
             this.level = 1;
         }
     }
+
     @Override
     public EBuilding getBuilding(){
         return this.building;
@@ -35,6 +36,12 @@ public abstract class BuildingImpl implements Building{
     public String getBuildingType(){
         return this.building.toString();
     }
+
+    @Override
+    public Integer getLevel(){
+        return this.level;
+    }
+
 
     public Building clone(){
         return null;
@@ -49,8 +56,18 @@ public abstract class BuildingImpl implements Building{
     }
 
     @Override
-    public Map<EBuilding,Integer> getDependencies(){
-        return null;
+    public boolean equals(Object obj){
+        if(obj.getClass() != getClass()){
+            return false;
+        }
+        BuildingImpl building = (BuildingImpl) obj;  
+        
+        if(building.getBuilding().equals(getBuilding())){
+            if(building.getLevel() == getLevel()){
+                return true;
+            }    
+            return false;
+        }
+        return false;
     }
-
 }

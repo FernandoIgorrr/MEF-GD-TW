@@ -5,16 +5,28 @@ import java.util.Set;
 
 import Factory.AbstractFactory;
 import Factory.FactoryProvider;
+import Graph.BuildingGraph;
+import Map.Coordinates;
+import Map.Interfaces.MapObject;
+import Player.Player;
 import Village.Army.Army;
 import Village.Buildings.Farm;
 import Village.Buildings.VillageHeadQuarters;
 import Village.Buildings.Abstract.BuildingImpl;
+import Village.Buildings.Constants.EBuilding;
+import Village.Buildings.Intefaces.Building;
 
 
-public class Village {
-    private int population;
-    private Set<BuildingImpl> buildings;
-    private Army army;
+public class Village implements MapObject{
+
+
+    private Coordinates         coordinates;
+    private Player               owner;
+    private BuildingGraph       BuildingGraph; 
+    private Integer             population;
+    private Integer             loyalty;
+    private Set<BuildingImpl>   buildings;
+    private Army                army;
 
     private AbstractFactory abstractFactory;
 
@@ -27,12 +39,7 @@ public class Village {
     }}
 
     private void buildVillage(){
-        this.buildings = new HashSet<>() {
-            {
-                add(new Farm());
-                add(new VillageHeadQuarters());
-            }
-        };
-    }
+        Building VILLAGE_HEADQUARTERS = (VillageHeadQuarters)abstractFactory.build(EBuilding.VILLAGE_HEADQUARTERS);
 
+    }
 }

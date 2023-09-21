@@ -1,7 +1,7 @@
 package Village.Buildings;
 
 import Village.Buildings.Abstract.BuildingImpl;
-import Village.Buildings.BuildingConstants.EBuilding;
+import Village.Buildings.Constants.EBuilding;
 import Village.Buildings.Intefaces.Building;
 
 public class VillageHeadQuarters extends BuildingImpl{

@@ -5,6 +5,9 @@ public class FactoryProvider {
         if(("building").equalsIgnoreCase(factoryType)){
             return new BuildingFactory();
         }
+        if(("node").equalsIgnoreCase(factoryType)){
+            return new NodeFactory();
+        }
         return null;
     }
 }
