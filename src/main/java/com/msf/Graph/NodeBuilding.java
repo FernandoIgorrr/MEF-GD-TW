@@ -6,11 +6,9 @@ import java.util.Map;
 import java.util.Set;
 
 import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.Building;
 
 public class NodeBuilding extends Node<EBuilding>{
     
-    //private Boolean ;
     private Map<NodeBuilding,Integer> _dependiencies;
     private Map<NodeBuilding,Integer> _dependents;
     
@@ -29,7 +27,7 @@ public class NodeBuilding extends Node<EBuilding>{
     }
 
     public EBuilding getBuilding(){
-        return this.getData();//getBuilding();
+        return this.getData();
     }
 
     public Integer getLevel(){
