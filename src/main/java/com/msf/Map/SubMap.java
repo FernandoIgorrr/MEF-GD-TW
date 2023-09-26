@@ -35,4 +35,23 @@ public class SubMap {
     public Integer getNum() {
         return Num;
     }
+
+    public Integer getPixelMinX() {
+        return pixelMinX;
+    }
+    public Integer getPixelMinY() {
+        return pixelMinY;
+    }
+    public Integer getPixelMaxX() {
+        return pixelMaxX;
+    }
+    public Integer getPixelMaxY() {
+        return pixelMaxY;
+    }
+
+    @Override
+    public String toString() {
+        return "SubMap Num=" + Num + "\n \t[pixelMinX=" + pixelMinX + ", \n\tpixelMinY=" + pixelMinY + ", \n\tpixelMaxX="
+                + pixelMaxX + ", \n\tpixelMaxY=" + pixelMaxY + "]\n***";
+    }
 }

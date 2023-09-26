@@ -3,10 +3,17 @@ package com.msf.Entity.Abstract;
 import java.util.List;
 
 import com.msf.Entity.Interfaces.Entity;
+import com.msf.Game.GamePanel;
+import com.msf.Game.Key.KeyHandler;
+import com.msf.IA.StateType;
 import com.msf.Map.Coordinates;
 import com.msf.Village.Village;
 
 public abstract class EntityImpl implements Entity{
+
+    private GamePanel gamePanel;
+    KeyHandler keyHandler;
+
     private Coordinates coordinates;
     private Integer speed;
 
@@ -15,6 +22,12 @@ public abstract class EntityImpl implements Entity{
     public EntityImpl(Coordinates coordinates, Integer speed){
         this.coordinates = coordinates;
         this.speed = speed;
+    }
+
+    public void updateState(StateType currenState){
+        switch(currenState){
+
+        }
     }
 
     public void setCoordinates(Coordinates coordinates) {

@@ -5,7 +5,6 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -14,9 +13,10 @@ import javax.swing.JPanel;
 
 import com.msf.Entity.Player;
 import com.msf.Game.Key.KeyHandler;
+import com.msf.Entity.Enemy;
 import com.msf.Map.Coordinates;
 import com.msf.Map.Map;
-import com.msf.Map.Abstract.Pair;
+import com.msf.Map.SubMap;
 
 public class GamePanel extends JPanel implements Runnable{
 
@@ -43,12 +43,15 @@ public class GamePanel extends JPanel implements Runnable{
     Thread gameThread;
 
     //Player
-    Player player = new Player(new Coordinates(screenWidth/2,screenHeight/2),5);
+    Player player = new Player(new Coordinates(screenWidth/2 - tileSize/2, screenHeight/2 - tileSize/2));
+
+    //Enemy
+    Enemy enemy1 = new Enemy(new Coordinates(320, 180),3);
+    Enemy enemy2 = new Enemy(new Coordinates(1200, 700),3);
+    
 
     //Map
-    Map map = new Map(player,7,screenWidth,screenHeight);
-
-    
+    Map gameMap = new Map(player,7,screenWidth,screenHeight);
 
     //frames por second
     Integer FPS = 60;
@@ -74,12 +77,37 @@ public class GamePanel extends JPanel implements Runnable{
         super.paintComponent(g);
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
 
-        Graphics2D g2 = (Graphics2D)g;
+        Graphics2D gMap      = (Graphics2D)g;
+        Graphics2D g2_player = (Graphics2D)g;
+        Graphics2D g2_enemy1 = (Graphics2D)g;
+        
+        gMap.setColor(Color.BLACK);
+        for (SubMap subMap : gameMap.getSubmaps()) {
+            gMap.fillRect(subMap.getPixelMinX(),subMap.getPixelMinY(),subMap.getPixelMaxX() - subMap.getPixelMinX(),1);
+            gMap.fillRect(subMap.getPixelMinX(),subMap.getPixelMinY(),1,subMap.getPixelMaxY() - subMap.getPixelMinY());
+
+            //gMap.fillRect(subMap.getPixelMinX(),subMap.getPixelMinX(),subMap.getPixelMaxX() - subMap.getPixelMinX(),1);
+            //gMap.fillRect(subMap.getPixelMinX(),subMap.getPixelMinX(),subMap.getPixelMaxX() - subMap.getPixelMinX(),1);
+        }
+
+        g2_player.setColor(Color.white);
+        g2_player.fillRect(this.player.getCoordinates().getX(),this.player.getCoordinates().getY(), tileSize, tileSize);
+        //g2_player.dispose();
+
+    //    g2_player.setColor(Color.BLACK);
+    //     g2_player.fillRect(screenWidth/2,0,1,screenHeight);
+
+    //      g2_player.setColor(Color.BLACK);
+    //     g2_player.fillRect(0,screenHeight/2,screenWidth,1);
+
         
 
-        g2.setColor(Color.white);
-        g2.fillRect(this.player.getCoordinates().getX(),this.player.getCoordinates().getY(), tileSize, tileSize);
-        g2.dispose();
+        g2_enemy1.setColor(Color.RED);
+        g2_enemy1.fillOval(this.enemy1.getCoordinates().getX(),this.enemy1.getCoordinates().getY(), tileSize, tileSize);
+        g2_enemy1.setColor(Color.BLACK);
+        g2_enemy1.fillOval(this.enemy2.getCoordinates().getX(),this.enemy2.getCoordinates().getY(), tileSize, tileSize);
+
+        g2_player.dispose();
     }
 
     public void startGameThread(){
@@ -118,7 +146,7 @@ public class GamePanel extends JPanel implements Runnable{
             }
 
             if(timer >= 1000000000){
-                System.out.println("FPS: " + drawCount);
+               // System.out.println("FPS: " + drawCount);
                 drawCount = 0;
                 timer = 0;
             }

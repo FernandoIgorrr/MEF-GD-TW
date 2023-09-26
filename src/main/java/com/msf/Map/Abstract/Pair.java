@@ -1,4 +1,4 @@
-package com.msf.Map;
+package com.msf.Map.Abstract;
 
 public abstract class Pair<X,Y>  {
 

@@ -12,8 +12,8 @@ public class Player extends EntityImpl{
 
 
 
-    public Player(Coordinates coordinates, Integer speed) {
-        super(coordinates, speed);
+    public Player(Coordinates coordinates) {
+        super(coordinates, 5);
     }
 
     private String nick;
