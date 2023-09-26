@@ -1,6 +1,6 @@
-package Factory;
+package com.msf.Factory;
 
-import Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Constants.EBuilding;
 
 public interface AbstractFactory<T> extends Factory{
     T build(EBuilding eBuilding);

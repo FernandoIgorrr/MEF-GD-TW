@@ -1,8 +1,8 @@
-package Village.Buildings;
+package com.msf.Village.Buildings;
 
-import Village.Buildings.Abstract.BelicBuidingImpl;
-import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.Building;
+import com.msf.Village.Buildings.Abstract.BelicBuidingImpl;
+import com.msf.Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Intefaces.Building;
 
 public class Workshop extends BelicBuidingImpl{
     

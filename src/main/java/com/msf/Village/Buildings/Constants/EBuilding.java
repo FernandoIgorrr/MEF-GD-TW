@@ -1,4 +1,4 @@
-package Village.Buildings.Constants;
+package com.msf.Village.Buildings.Constants;
 
 import java.util.HashMap;
 import java.util.Map;

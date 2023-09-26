@@ -1,13 +1,13 @@
-package Graph;
+package com.msf.Graph;
 
 import java.util.Iterator;
 import java.util.Set;
 
-import Factory.AbstractFactory;
-import Factory.FactoryProvider;
-import Village.Buildings.Market;
-import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.Building;
+import com.msf.Factory.AbstractFactory;
+import com.msf.Factory.FactoryProvider;
+import com.msf.Village.Buildings.Market;
+import com.msf.Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Intefaces.Building;
 
 public class BuildingGraph{
     public Set<NodeBuilding> roots;

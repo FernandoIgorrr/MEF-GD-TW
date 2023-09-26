@@ -1,9 +1,9 @@
-package Village.Units;
+package com.msf.Village.Units;
 
-import Village.Units.Abstracts.Unit;
-import Village.Units.Constantes.EUnit;
+import com.msf.Village.Units.Abstracts.UnitImpl;
+import com.msf.Village.Units.Constantes.EUnit;
 
-public class Axeman extends Unit{
+public class Axeman extends UnitImpl{
 
     public Axeman() {
         super(EUnit.AXEMAN);

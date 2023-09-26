@@ -1,12 +1,12 @@
-package Factory;
+package com.msf.Factory;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import Village.Buildings.Farm;
-import Village.Buildings.VillageHeadQuarters;
-import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.Building;
+import com.msf.Village.Buildings.Farm;
+import com.msf.Village.Buildings.VillageHeadQuarters;
+import com.msf.Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Intefaces.Building;
 
 public class BuildingFactory implements AbstractFactory<Building>{
 

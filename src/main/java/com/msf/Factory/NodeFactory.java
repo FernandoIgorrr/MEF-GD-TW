@@ -1,11 +1,11 @@
-package Factory;
+package com.msf.Factory;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import Graph.Node;
-import Graph.NodeBuilding;
-import Village.Buildings.Constants.EBuilding;
+import com.msf.Graph.Node;
+import com.msf.Graph.NodeBuilding;
+import com.msf.Village.Buildings.Constants.EBuilding;
 
 public class NodeFactory implements AbstractFactory<Node>{
 

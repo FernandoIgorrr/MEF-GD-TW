@@ -1,8 +1,8 @@
-package Village.Buildings.Intefaces;
+package com.msf.Village.Buildings.Intefaces;
 
 import java.util.Map;
 
-import Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Constants.EBuilding;
 
 public interface Building{
 

@@ -1,9 +1,9 @@
-package Village.Buildings.Abstract;
+package com.msf.Village.Buildings.Abstract;
 
 import java.util.Map;
 
-import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.Building;
+import com.msf.Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Intefaces.Building;
 
 public abstract class BuildingImpl implements Building{
 

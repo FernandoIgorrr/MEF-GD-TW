@@ -1,7 +1,7 @@
-package Village.Buildings.Abstract;
+package com.msf.Village.Buildings.Abstract;
 
-import Village.Buildings.Constants.EBuilding;
-import Village.Buildings.Intefaces.BelicBuilding;
+import com.msf.Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Intefaces.BelicBuilding;
 
 public abstract class BelicBuidingImpl extends BuildingImpl implements BelicBuilding{
 

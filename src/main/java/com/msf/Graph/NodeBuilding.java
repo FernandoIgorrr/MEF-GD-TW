@@ -1,11 +1,11 @@
-package Graph;
+package com.msf.Graph;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import Village.Buildings.Constants.EBuilding;
+import com.msf.Village.Buildings.Constants.EBuilding;
 
 public class NodeBuilding extends Node<EBuilding>{
     

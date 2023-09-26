@@ -1,4 +1,4 @@
-package Village.Units.Constantes;
+package com.msf.Village.Units.Constantes;
 
 public enum EUnit {
     

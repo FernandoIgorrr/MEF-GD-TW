@@ -1,9 +1,9 @@
-package Map;
+package com.msf.Map;
 
 public class Coordinates extends Pair<Integer,Integer>{
 
-    public Coordinates(Integer value1, Integer value2) {
-        super(value1, value2);
+    public Coordinates(Integer x, Integer y) {
+        super(x, y);
         //TODO Auto-generated constructor stub
     }
 }

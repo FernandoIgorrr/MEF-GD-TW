@@ -1,4 +1,4 @@
-package Factory;
+package com.msf.Factory;
 
 public class FactoryProvider {
     public static AbstractFactory getFactory(String factoryType){

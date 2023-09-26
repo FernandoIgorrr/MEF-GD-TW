@@ -1,4 +1,4 @@
-package Graph;
+package com.msf.Graph;
 
 public abstract class Node<T>{
     

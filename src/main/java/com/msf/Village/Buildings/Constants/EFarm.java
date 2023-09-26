@@ -1,18 +1,11 @@
-package Village.Buildings.Constants;
+package com.msf.Village.Buildings.Constants;
 
 import java.util.Map;
 import java.util.HashMap;
 
-
 public interface EFarm {
 
-    public final static Map<EBuilding,Integer> FARM_DEPENDENCIES = new HashMap<>(){
-        {
-            
-        }
-    };
-
-    public final static Map<Integer,Integer> LEVEL_POPULATION_FARM_MAP = new HashMap<>(){
+    public final static Map<Integer,Integer> LEVEL_POPULATION_FARM_MAP = new HashMap<Integer,Integer>(){
         {
             put(1, 240);
             put(2, 281);
@@ -49,7 +42,7 @@ public interface EFarm {
         }
     };
 
-    public final static Map<Integer,Integer> LEVEL_WOOD_COST_UP_MAP = new HashMap<>(){
+    public final static Map<Integer,Integer> LEVEL_WOOD_COST_UP_MAP = new HashMap<Integer,Integer>(){
         {
             put(1, 45);
             put(2, 59);
@@ -85,5 +78,4 @@ public interface EFarm {
             put(30, 90_692);
         }
     };
-
 }
