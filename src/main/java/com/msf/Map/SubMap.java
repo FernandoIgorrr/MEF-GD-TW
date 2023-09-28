@@ -1,5 +1,7 @@
 package com.msf.Map;
 
+import com.msf.Map.Abstract.Pair;
+
 public class SubMap {
     
     Integer Num;
@@ -30,6 +32,14 @@ public class SubMap {
             return false;
         }
         return true;
+    }
+
+    public Coordinates getCenter(){
+
+        Integer centerX = (pixelMinX + pixelMaxX) / 2;
+        Integer centerY = (pixelMinY + pixelMaxY) / 2;
+
+        return new Coordinates(centerX,centerY);
     }
 
     public Integer getNum() {

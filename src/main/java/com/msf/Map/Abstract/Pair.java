@@ -25,4 +25,9 @@ public abstract class Pair<X,Y>  {
     public void setY(Y y) {
          this.y = y;
     }
+
+    public void setPair(X x,Y y){
+        this.x = x;
+        this.y = y;
+    }
 }

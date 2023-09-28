@@ -3,12 +3,14 @@ package com.msf.Map;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.msf.Entity.Enemy;
 import com.msf.Map.Abstract.Pair;
 import com.msf.Map.Interfaces.MapObject;
 
 public class Map {
     private MapObject[][] mapObjects;
     private List<SubMap> submaps;
+
     public List<SubMap> getSubmaps() {
         return submaps;
     }
@@ -19,6 +21,7 @@ public class Map {
 
     public Map(MapObject player,Integer enemys,Integer screenWidth,Integer screenHeight){
         this.subMapsGenerator(screenWidth,screenHeight);
+
         //this.showsubmaps();
     }
 

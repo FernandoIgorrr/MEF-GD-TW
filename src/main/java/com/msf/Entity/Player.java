@@ -10,13 +10,20 @@ import com.msf.Village.Village;
 
 public class Player extends EntityImpl{
 
+    private String nick;
+    private static Player instance;
 
-
-    public Player(Coordinates coordinates) {
+    private Player(Coordinates coordinates) {
         super(coordinates, 5);
     }
 
-    private String nick;
+    public static Player getInstance(Coordinates coordinates) {
+        if (instance == null) {
+            instance = new Player(coordinates);
+        }
+        return instance;
+    }
+
    
 }
 

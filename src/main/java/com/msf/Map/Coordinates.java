@@ -8,4 +8,11 @@ public class Coordinates extends Pair<Integer,Integer>{
         super(x, y);
         //TODO Auto-generated constructor stub
     }
+
+    @Override
+    public String toString() {
+        return "Coordinates ["+getX()+","+getY()+"]";
+    }
+
+    
 }

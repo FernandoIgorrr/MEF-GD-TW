@@ -19,19 +19,21 @@ public abstract class EntityImpl implements Entity{
 
     private List<Village> villages;
 
+    public EntityImpl(Integer speed){
+        this.speed = speed;
+    }
+
     public EntityImpl(Coordinates coordinates, Integer speed){
         this.coordinates = coordinates;
         this.speed = speed;
     }
 
-    public void updateState(StateType currenState){
-        switch(currenState){
-
-        }
-    }
-
     public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
+    }
+
+    public void setCoordinates(int x, int y){
+        coordinates.setPair(x,y);
     }
 
     public Coordinates getCoordinates() {
